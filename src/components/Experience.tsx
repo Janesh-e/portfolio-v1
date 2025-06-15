@@ -27,7 +27,7 @@ const Experience = () => {
     },
     {
       title: "Data Scientist Intern",
-      company: "University Research Lab",
+      company: "Exposys Data Labs",
       location: "Remote",
       duration: "May 2024 - June 2024",
       description: "Worked on a healthcare AI project focused on predicting diabetes risk using patient lab results and lifestyle data.",
