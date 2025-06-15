@@ -17,31 +17,22 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <ScrambleText 
-              text="I'm a passionate Computer Science student in my final year, with a deep fascination for Artificial Intelligence, Machine Learning, and Data Science. My journey in technology began with curiosity about how machines can learn and make decisions, leading me to explore the vast possibilities in AI."
+              text="I'm a Computer Science undergrad in my final year, specializing in Artificial Intelligence, Machine Learning, and Data Science. My journey into the world of AI/ML began not just out of academic pursuit, but out of pure curiosity."
               className="text-gray-300 text-lg leading-relaxed"
               delay={200}
             />
             
             <ScrambleText 
-              text="Throughout my academic journey, I've worked on various projects involving machine learning algorithms, data analysis, and AI applications. I believe in the power of data to drive meaningful insights and create solutions that can make a positive impact on society."
+              text="When I first learned that AI could already handle complex tasks that once demanded careful planning, logic, and engineering by humans like us, I was hooked. From writing code to diagnosing diseases, AI is no longer science fiction — it’s happening now, and it's only getting smarter."
               className="text-gray-300 text-lg leading-relaxed"
               delay={400}
             />
 
-            <div className="flex flex-wrap gap-4 mt-8">
-              <div className="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg">
-                <Code className="text-emerald-400" size={20} />
-                <span className="text-white">Full Stack Development</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg">
-                <Brain className="text-emerald-400" size={20} />
-                <span className="text-white">Machine Learning</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg">
-                <Database className="text-emerald-400" size={20} />
-                <span className="text-white">Data Science</span>
-              </div>
-            </div>
+            <ScrambleText 
+              text="That moment made me realize: if AI is the future, it’s only wise to understand how it works — and even better, learn how to build it."
+              className="text-gray-300 text-lg leading-relaxed"
+              delay={400}
+            />
           </div>
 
           <div className="relative">
