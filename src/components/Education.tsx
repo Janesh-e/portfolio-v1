@@ -5,35 +5,37 @@ import ScrambleText from './ScrambleText';
 const Education = () => {
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of Technology",
-      location: "California, USA",
-      duration: "2021 - 2025 (Expected)",
-      gpa: "3.8/4.0",
-      specialization: "Artificial Intelligence & Machine Learning",
+      degree: "BTech, Computer Science and Business Systems",
+      school: "Sri Sairam Engineering College",
+      location: "Chennai, India",
+      duration: "2022 - 2026",
+      gpa: "8.91/10.0",
+      specialization: "Computer Science and Engineering",
       coursework: [
-        "Machine Learning Algorithms",
-        "Deep Learning & Neural Networks", 
-        "Data Structures & Algorithms",
-        "Database Management Systems",
-        "Computer Vision",
-        "Natural Language Processing"
+        "Data Structures and Algorithm",
+        "Database Management System"
+        "Operating Systems",
+        "Compiler Design",
+        "Formal Language & Automata Theory",
+        "Financial Management",
+        "Design Thinking"
       ]
     },
     {
-      degree: "High School Diploma",
-      school: "Metropolitan High School",
-      location: "California, USA", 
-      duration: "2017 - 2021",
-      gpa: "3.9/4.0",
-      specialization: "Science & Mathematics Track",
+      degree: "BS in Data Science and Applications",
+      school: "Indian Institute of Technology, Madras",
+      location: "Online", 
+      duration: "2022 - 2028 (Expected)",
+      gpa: "8.48/10.0",
+      specialization: "Data Science, Machine Learning, Artificial Intelligence",
       coursework: [
-        "Advanced Mathematics",
-        "Physics",
-        "Chemistry",
-        "Computer Programming",
-        "Statistics",
-        "Calculus"
+        "Linear Algebra",
+        "Probability & Statistics",
+        "Calculus",
+        "Modern Application Development",
+        "Tools for Data Science",
+        "Machine Learning Fundamentals, Practices & Techniques",
+        "Deep Learning",
       ]
     }
   ];
