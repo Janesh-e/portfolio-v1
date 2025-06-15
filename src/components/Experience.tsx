@@ -5,39 +5,49 @@ import ScrambleText from './ScrambleText';
 const Experience = () => {
   const experiences = [
     {
-      title: "Machine Learning Intern",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      duration: "Jun 2024 - Aug 2024",
-      description: "Developed and optimized machine learning models for customer behavior analysis. Improved model accuracy by 23% and reduced processing time by 40%.",
+      title: "Mentorship",
+      company: "Indian Institute of Technology, Madras (IITM)",
+      location: "Remote",
+      duration: "Sept 2023 - Dec 2023",
+      description: "Served as a mentor for the Mathematics for Data Science – 2 course under IIT Madras’ online BSc program, providing academic guidance and conceptual support to the learners",
       achievements: [
+        "Mentored 10+ undergraduate students enrolled in IIT Madras' online BSc program in Mathematics for Data Science – 2",
+        "Clarified complex mathematical concepts such as linear algebra, probability and statistics as applied in data science.",
+      ]
+    },
+    {
+      title: "Data Science Internship Trainee",
+      company: "Corizo",
+      location: "Remote",
+      duration: "Jan 2024 - Mar 2024",
+      description: "Honed my skills in data analysis, programming, prediction model building and problem-solving, laying a strong foundation for my journey into the field of data science ; worked on diverse projects, including stock price prediction and wine quality assessment.",
+      achievements: [
+        "Laid a solid foundation in data science workflows — from data collection to modeling and evaluation",
         "Built predictive models using Python and scikit-learn",
-        "Collaborated with data engineering team on pipeline optimization",
-        "Presented findings to senior management team"
       ]
     },
     {
-      title: "Data Science Research Assistant",
+      title: "Data Scientist Intern",
       company: "University Research Lab",
-      location: "Campus",
-      duration: "Jan 2024 - Present",
-      description: "Conducting research on natural language processing applications in healthcare data analysis under Professor Johnson.",
+      location: "Remote",
+      duration: "May 2024 - June 2024",
+      description: "Worked on a healthcare AI project focused on predicting diabetes risk using patient lab results and lifestyle data.",
       achievements: [
-        "Published 2 papers in peer-reviewed conferences",
-        "Developed NLP models for medical text analysis",
-        "Mentored 3 junior students in research methodology"
+        "Engineered 8+ domain-specific features using patient lab results and lifestyle data",
+        "Implemented a stacking ensemble combining multiple base learners",
+        "Built a diabetes risk prediction model that achieved 90% accuracy, surpassing traditional risk assessment benchmarks"
       ]
     },
     {
-      title: "Software Development Intern",
-      company: "StartupXYZ",
-      location: "New York, NY",
-      duration: "May 2023 - Aug 2023",
-      description: "Full-stack development of web applications using React and Node.js. Worked in an agile environment with daily standups and sprint planning.",
+      title: "Software & AI Subsystem Member",
+      company: "Ad Astra Rover Team",
+      location: "Sri Sairam Engineering College, Chennai",
+      duration: "Oct 2024 - March 2025",
+      description: "Orchestrated autonomous navigation system for next-generation Mars rover, enabling the rover to traverse rugged terrains while avoiding obstacles.",
       achievements: [
-        "Developed 5 major features for the main product",
-        "Improved application performance by 35%",
-        "Participated in code reviews and debugging sessions"
+        "Achieved 95% obstacle avoidance accuracy using advanced path-planning algorithms and localization techniques",
+        "Integrated computer vision and sensor fusion to enhance real-time decision-making in unpredictable environments",
+        "Collaborated with a multidisciplinary team to enhance software architecture and system efficiency."
       ]
     }
   ];
