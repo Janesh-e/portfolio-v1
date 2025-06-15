@@ -106,7 +106,7 @@ const Experience = () => {
                     className="text-gray-300 mb-4 leading-relaxed"
                     delay={index * 200 + 200}
                   />
-                  <br />
+                  <br className="mb-4" />
 
                   <div className="space-y-2">
                     {exp.achievements.map((achievement, achIndex) => (
