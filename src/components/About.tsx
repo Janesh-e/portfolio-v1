@@ -23,16 +23,23 @@ const About = () => {
             />
             
             <ScrambleText 
-              text="When I first learned that AI could already handle complex tasks that once demanded careful planning, logic, and engineering by humans like us, I was hooked. From writing code to diagnosing diseases, AI is no longer science fiction — it’s happening now, and it's only getting smarter."
+              text=" When I first learned that AI could already handle complex tasks that once demanded careful planning, logic, and engineering by humans like us, I was hooked. From writing code to diagnosing diseases, AI is no longer science fiction — it’s happening now, and it's only getting smarter."
               className="text-gray-300 text-lg leading-relaxed"
               delay={400}
             />
-
+            </br>
             <ScrambleText 
               text="That moment made me realize: if AI is the future, it’s only wise to understand how it works — and even better, learn how to build it."
               className="text-gray-300 text-lg leading-relaxed"
               delay={400}
             />
+            </br>
+            <ScrambleText 
+              text="I’m particularly passionate about exploring the real-world applications of AI in areas that genuinely matter:"
+              className="text-gray-300 text-lg leading-relaxed"
+              delay={400}
+            />
+            
           </div>
 
           <div className="relative">
