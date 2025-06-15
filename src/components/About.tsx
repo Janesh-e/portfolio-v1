@@ -35,7 +35,7 @@ const About = () => {
             />
             <br />
             <ScrambleText 
-              text="I'm particularly passionate about exploring the real-world applications of AI in areas that genuinely matter:"
+              text="I'm particularly passionate about exploring the real-world applications of AI in areas that genuinely matter - Smart Education, Computer Vision and Astronomy"
               className="text-gray-300 text-lg leading-relaxed"
               delay={400}
             />
