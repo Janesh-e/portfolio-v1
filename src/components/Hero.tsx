@@ -13,22 +13,14 @@ const Hero = () => {
       <div className="text-center z-10 max-w-4xl mx-auto px-4">
         <div className="mb-6">
           <ScrambleText 
-            text="Hello, I'm Alex Thompson" 
+            text="Hello, I'm Janesh" 
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent"
-          />
-        </div>
-        
-        <div className="mb-8">
-          <ScrambleText 
-            text="Final Year Computer Science Student" 
-            className="text-xl md:text-2xl text-gray-300 font-light"
-            delay={500}
           />
         </div>
         
         <div className="mb-12">
           <ScrambleText 
-            text="Specializing in AI/ML & Data Science" 
+            text="Exploring the boundaries of intelligence, one model at a time." 
             className="text-lg md:text-xl text-emerald-400 font-medium"
             delay={1000}
           />
