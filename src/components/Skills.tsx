@@ -5,19 +5,19 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python", "JavaScript", "Java", "C++", "R", "SQL"]
+      skills: ["Python","C", "C++", "R", "SQL", "JavaScript", "Java", "Bash"]
     },
     {
       title: "AI/ML & Data Science",
-      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
+      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "OpenCV"]
     },
     {
       title: "Web Technologies",
-      skills: ["React", "Node.js", "Express.js", "MongoDB", "PostgreSQL", "Docker"]
+      skills: ["Flask", "FastAPI", "SQLAlchemy", "PostgreSQL", "Vue.js", "Docker"]
     },
     {
       title: "Tools & Platforms",
-      skills: ["Git", "AWS", "Jupyter", "VS Code", "Linux", "Tableau"]
+      skills: ["Git", "Jupyter", "Anaconda", "VS Code", "Linux"]
     }
   ];
 
