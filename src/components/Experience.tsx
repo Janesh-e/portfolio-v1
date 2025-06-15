@@ -1,4 +1,3 @@
-
 import { Calendar, MapPin } from 'lucide-react';
 import ScrambleText from './ScrambleText';
 
@@ -9,7 +8,7 @@ const Experience = () => {
       company: "Indian Institute of Technology, Madras (IITM)",
       location: "Remote",
       duration: "Sept 2023 - Dec 2023",
-      description: "Served as a mentor for the Mathematics for Data Science – 2 course under IIT Madras’ online BSc program, providing academic guidance and conceptual support to the learners",
+      description: "Served as a mentor for the Mathematics for Data Science – 2 course under IIT Madras' online BSc program, providing academic guidance and conceptual support to the learners",
       achievements: [
         "Mentored 10+ undergraduate students enrolled in IIT Madras' online BSc program in Mathematics for Data Science – 2",
         "Clarified complex mathematical concepts such as linear algebra, probability and statistics as applied in data science.",
@@ -79,7 +78,7 @@ const Experience = () => {
                     <div>
                       <ScrambleText 
                         text={exp.title}
-                        className="text-xl font-bold text-white mb-1"
+                        className="text-xl font-bold text-white mb-2"
                         delay={index * 200}
                       />
                       <ScrambleText 
