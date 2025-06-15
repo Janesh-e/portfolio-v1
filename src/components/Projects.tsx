@@ -1,6 +1,6 @@
 
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import ScrambleText from './ScrambleText';
 
 const Projects = () => {
@@ -49,10 +49,10 @@ const Projects = () => {
 
     const cardWidth = 320; // Width of one project card (w-80 = 320px)
     const gap = 24; // gap-6 = 24px
-    const scrollAmount = cardWidth + gap; // Move by exactly one card width plus gap
+    const scrollAmount = cardWidth + gap;
     
     const newScrollLeft = direction === 'left' 
-      ? container.scrollLeft - scrollAmount 
+      ? Math.max(0, container.scrollLeft - scrollAmount)
       : container.scrollLeft + scrollAmount;
 
     container.scrollTo({
@@ -60,21 +60,31 @@ const Projects = () => {
       behavior: 'smooth'
     });
 
-    // Update button states after scroll
+    // Update button states after scroll animation completes
     setTimeout(() => {
       updateScrollButtons();
-    }, 300);
+    }, 400);
   };
 
   const updateScrollButtons = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    setCanScrollLeft(container.scrollLeft > 0);
-    setCanScrollRight(
-      container.scrollLeft < container.scrollWidth - container.clientWidth
-    );
+    const scrollLeft = container.scrollLeft;
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+    setCanScrollLeft(scrollLeft > 5); // Small tolerance for floating point precision
+    setCanScrollRight(scrollLeft < maxScrollLeft - 5);
   };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      updateScrollButtons();
+      container.addEventListener('scroll', updateScrollButtons);
+      return () => container.removeEventListener('scroll', updateScrollButtons);
+    }
+  }, []);
 
   return (
     <section id="projects" className="py-20 px-4 bg-gray-900">
@@ -117,13 +127,13 @@ const Projects = () => {
           <div className="overflow-hidden mx-16">
             <div 
               ref={scrollContainerRef}
-              className="flex gap-6 overflow-x-auto scrollbar-hide transition-transform duration-300"
+              className="flex gap-6 overflow-x-auto scrollbar-hide"
               style={{ 
                 scrollbarWidth: 'none', 
                 msOverflowStyle: 'none',
-                width: 'calc(4 * 320px + 3 * 24px)' // Exactly 4 cards + 3 gaps
+                width: '100%',
+                maxWidth: 'calc(4 * 320px + 3 * 24px)' // Exactly 4 cards + 3 gaps
               }}
-              onScroll={updateScrollButtons}
             >
               {projects.map((project, index) => (
                 <div key={index} className="flex-shrink-0 w-80 bg-black/50 rounded-xl overflow-hidden border border-gray-800 hover:border-emerald-500/50 transition-all duration-300 group">
