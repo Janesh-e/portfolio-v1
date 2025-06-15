@@ -65,7 +65,7 @@ const Achievements = () => {
           />
           <div className="w-24 h-1 bg-emerald-500 mx-auto"></div>
         </div>
-
+        {/*
         <div className="grid lg:grid-cols-4 gap-6 mb-12">
           {stats.map((stat, index) => (
             <div key={index} className="bg-black/50 rounded-xl p-6 text-center border border-gray-800 hover:border-emerald-500/50 transition-all duration-300">
@@ -82,7 +82,7 @@ const Achievements = () => {
             </div>
           ))}
         </div>
-
+*/}
         <div className="grid md:grid-cols-2 gap-6">
           {achievements.map((achievement, index) => (
             <div key={index} className="bg-black/50 rounded-xl p-6 border border-gray-800 hover:border-emerald-500/50 transition-all duration-300 group">
