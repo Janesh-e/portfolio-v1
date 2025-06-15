@@ -72,6 +72,7 @@ const Education = () => {
                       className="text-xl font-bold text-white mb-1"
                       delay={index * 200}
                     />
+                    <br />
                     <ScrambleText 
                       text={edu.school}
                       className="text-emerald-400 font-semibold mb-2"
