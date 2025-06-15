@@ -1,8 +1,17 @@
-
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Download } from 'lucide-react';
 import ScrambleText from './ScrambleText';
 
 const Hero = () => {
+  const handleDownloadCV = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/cv.pdf'; // Path to CV in public folder
+    link.download = 'Janesh_CV.pdf'; // Name for downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-black via-gray-900 to-black">
       <div className="absolute inset-0 opacity-20">
@@ -30,7 +39,11 @@ const Hero = () => {
           <button className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25">
             View My Work
           </button>
-          <button className="px-8 py-3 border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-black font-semibold rounded-lg transition-all duration-300">
+          <button 
+            onClick={handleDownloadCV}
+            className="px-8 py-3 border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-black font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
+          >
+            <Download size={18} />
             Download CV
           </button>
         </div>
