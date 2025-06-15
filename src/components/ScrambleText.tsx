@@ -34,25 +34,33 @@ const ScrambleText = ({ text, className = '', delay = 0 }: ScrambleTextProps) =>
 
   const startScramble = () => {
     let iteration = 0;
+    const maxIterations = 20; // Number of scrambling iterations before revealing text
+    
     const interval = setInterval(() => {
       setDisplayText(() => 
         text
           .split('')
           .map((char, index) => {
             if (char === ' ') return ' ';
-            if (index < iteration) return text[index];
+            
+            // After maxIterations, start revealing the actual text
+            if (iteration >= maxIterations) {
+              return text[index];
+            }
+            
+            // Show random characters during scrambling phase
             return characters[Math.floor(Math.random() * characters.length)];
           })
           .join('')
       );
 
-      iteration += 1/3;
+      iteration += 1;
 
-      if (iteration >= text.length) {
+      if (iteration > maxIterations + 3) {
         clearInterval(interval);
         setDisplayText(text);
       }
-    }, 30);
+    }, 50);
   };
 
   return (
