@@ -5,49 +5,38 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: [
-        { name: "Python", level: 95 },
-        { name: "JavaScript", level: 88 },
-        { name: "Java", level: 82 },
-        { name: "C++", level: 78 },
-        { name: "R", level: 75 },
-        { name: "SQL", level: 90 }
-      ]
+      skills: ["Python", "JavaScript", "Java", "C++", "R", "SQL"]
     },
     {
       title: "AI/ML & Data Science",
-      skills: [
-        { name: "TensorFlow", level: 85 },
-        { name: "PyTorch", level: 80 },
-        { name: "Scikit-learn", level: 92 },
-        { name: "Pandas", level: 95 },
-        { name: "NumPy", level: 93 },
-        { name: "Matplotlib", level: 88 }
-      ]
+      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
     },
     {
       title: "Web Technologies",
-      skills: [
-        { name: "React", level: 90 },
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 82 },
-        { name: "MongoDB", level: 80 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "Docker", level: 75 }
-      ]
+      skills: ["React", "Node.js", "Express.js", "MongoDB", "PostgreSQL", "Docker"]
     },
     {
       title: "Tools & Platforms",
-      skills: [
-        { name: "Git", level: 92 },
-        { name: "AWS", level: 78 },
-        { name: "Jupyter", level: 95 },
-        { name: "VS Code", level: 98 },
-        { name: "Linux", level: 85 },
-        { name: "Tableau", level: 80 }
-      ]
+      skills: ["Git", "AWS", "Jupyter", "VS Code", "Linux", "Tableau"]
     }
   ];
+
+  const getRandomSize = () => {
+    const sizes = ['text-sm', 'text-base', 'text-lg'];
+    return sizes[Math.floor(Math.random() * sizes.length)];
+  };
+
+  const getRandomColor = () => {
+    const colors = [
+      'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+      'bg-blue-500/20 text-blue-300 border-blue-500/30',
+      'bg-purple-500/20 text-purple-300 border-purple-500/30',
+      'bg-pink-500/20 text-pink-300 border-pink-500/30',
+      'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
+      'bg-orange-500/20 text-orange-300 border-orange-500/30'
+    ];
+    return colors[Math.floor(Math.random() * colors.length)];
+  };
 
   return (
     <section id="skills" className="py-20 px-4 bg-black">
@@ -60,37 +49,48 @@ const Skills = () => {
           <div className="w-24 h-1 bg-emerald-500 mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-12">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-gray-900/50 rounded-xl p-6 border border-gray-800 hover:border-emerald-500/30 transition-all duration-300">
+            <div key={categoryIndex} className="text-center">
               <ScrambleText 
                 text={category.title}
-                className="text-xl font-bold text-emerald-400 mb-6"
+                className="text-2xl font-bold text-emerald-400 mb-8"
                 delay={categoryIndex * 200}
               />
               
-              <div className="space-y-4">
+              <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <ScrambleText 
-                        text={skill.name}
-                        className="text-gray-300 font-medium"
-                        delay={categoryIndex * 200 + skillIndex * 100}
-                      />
-                      <span className="text-emerald-400 text-sm font-semibold">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-800 rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-emerald-400 to-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                  <div
+                    key={skillIndex}
+                    className={`
+                      px-4 py-2 rounded-full border transition-all duration-300
+                      hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/20
+                      cursor-default transform hover:-translate-y-1
+                      ${getRandomColor()}
+                      ${getRandomSize()}
+                      animate-fade-in
+                    `}
+                    style={{
+                      animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
+                    }}
+                  >
+                    <ScrambleText 
+                      text={skill}
+                      className="font-medium"
+                      delay={categoryIndex * 200 + skillIndex * 100}
+                    />
                   </div>
                 ))}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Floating background elements for visual interest */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400/20 rounded-full animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-blue-400/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-purple-400/20 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
       </div>
     </section>
