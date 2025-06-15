@@ -137,14 +137,6 @@ const Education = () => {
                 ))}
               </div>
             </div>
-
-            <div className="bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-xl p-6 border border-emerald-500/30">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">3.8</div>
-                <div className="text-white font-semibold mb-1">Current GPA</div>
-                <div className="text-gray-300 text-sm">Out of 4.0</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
