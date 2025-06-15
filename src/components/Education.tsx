@@ -1,4 +1,3 @@
-
 import { GraduationCap, Award, BookOpen } from 'lucide-react';
 import ScrambleText from './ScrambleText';
 
@@ -13,7 +12,7 @@ const Education = () => {
       specialization: "Computer Science and Engineering",
       coursework: [
         "Data Structures and Algorithm",
-        "Database Management System"
+        "Database Management System",
         "Operating Systems",
         "Compiler Design",
         "Formal Language & Automata Theory",
