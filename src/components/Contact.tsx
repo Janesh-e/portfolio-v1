@@ -13,7 +13,7 @@ const Contact = () => {
           />
           <div className="w-24 h-1 bg-emerald-500 mx-auto mb-6"></div>
           <ScrambleText 
-            text="I'm always open to discussing new opportunities, interesting projects, or just having a chat about AI and technology."
+            text="I'm always open to discussing new opportunities, interesting projects and research works, or just having a chat about AI and technology."
             className="text-gray-300 text-lg max-w-2xl mx-auto"
             delay={200}
           />
@@ -29,7 +29,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-1">Email</h3>
                   <ScrambleText 
-                    text="alex.thompson@email.com"
+                    text="ekambaramjanesh@gmail.com"
                     className="text-gray-300"
                     delay={300}
                   />
@@ -43,7 +43,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-1">Phone</h3>
                   <ScrambleText 
-                    text="+1 (555) 123-4567"
+                    text="+91 78068 51741"
                     className="text-gray-300"
                     delay={400}
                   />
@@ -57,7 +57,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-1">Location</h3>
                   <ScrambleText 
-                    text="San Francisco, CA, USA"
+                    text="Chennai, TN, India"
                     className="text-gray-300"
                     delay={500}
                   />
@@ -66,14 +66,11 @@ const Contact = () => {
             </div>
 
             <div className="flex space-x-4">
-              <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-all duration-300 group">
+              <a href="https://github.com/Janesh-e" className="w-12 h-12 bg-gray-800 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-all duration-300 group">
                 <Github className="text-gray-300 group-hover:text-black" size={20} />
               </a>
-              <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-all duration-300 group">
+              <a href="www.linkedin.com/in/janesh-e-683457258" className="w-12 h-12 bg-gray-800 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-all duration-300 group">
                 <Linkedin className="text-gray-300 group-hover:text-black" size={20} />
-              </a>
-              <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-all duration-300 group">
-                <Twitter className="text-gray-300 group-hover:text-black" size={20} />
               </a>
             </div>
           </div>
@@ -138,7 +135,7 @@ const Contact = () => {
 
         <div className="text-center mt-16 pt-8 border-t border-gray-800">
           <ScrambleText 
-            text="© 2024 Alex Thompson. All rights reserved."
+            text="© 2025 Janesh. All rights reserved."
             className="text-gray-400"
             delay={600}
           />
