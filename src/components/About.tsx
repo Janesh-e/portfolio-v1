@@ -27,13 +27,13 @@ const About = () => {
               className="text-gray-300 text-lg leading-relaxed"
               delay={400}
             />
-            <br />
+            <br className="mb-4" />
             <ScrambleText 
               text="That moment made me realize: if AI is the future, it's only wise to understand how it works — and even better, learn how to build it."
               className="text-gray-300 text-lg leading-relaxed"
               delay={400}
             />
-            <br />
+            <br className="mb-4" />
             <ScrambleText 
               text="I'm particularly passionate about exploring the real-world applications of AI in areas that genuinely matter - Smart Education, Computer Vision and Astronomy"
               className="text-gray-300 text-lg leading-relaxed"
