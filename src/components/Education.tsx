@@ -2,8 +2,21 @@
 import { GraduationCap, Award, BookOpen, School } from 'lucide-react';
 import ScrambleText from './ScrambleText';
 
+interface EducationItem {
+  type: 'college' | 'school';
+  degree?: string;
+  school: string;
+  location: string;
+  duration: string;
+  gpa?: string;
+  percentage?: string;
+  specialization?: string;
+  description?: string;
+  coursework?: string[];
+}
+
 const Education = () => {
-  const education = [
+  const education: EducationItem[] = [
     {
       type: 'college',
       degree: "BTech, Computer Science and Business Systems",

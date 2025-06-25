@@ -4,7 +4,7 @@ import {
   SiPython, SiJavascript, SiCplusplus, SiR, SiMysql,
   SiTensorflow, SiPytorch, SiScikitlearn, SiPandas, SiNumpy, SiOpencv,
   SiFlask, SiFastapi, SiPostgresql, SiVuedotjs, SiDocker,
-  SiGit, SiJupyter, SiAnaconda, SiLinux, SiVisualstudio
+  SiGit, SiJupyter, SiAnaconda, SiLinux, SiVisualstudiocode
 } from 'react-icons/si';
 import { FaC } from 'react-icons/fa6';
 import { SiGnubash } from 'react-icons/si';
@@ -52,7 +52,7 @@ const Skills = () => {
         { name: "Git", icon: SiGit },
         { name: "Jupyter", icon: SiJupyter },
         { name: "Anaconda", icon: SiAnaconda },
-        { name: "VS Code", icon: SiVisualstudio },
+        { name: "VS Code", icon: SiVisualstudiocode },
         { name: "Linux", icon: SiLinux }
       ]
     }
