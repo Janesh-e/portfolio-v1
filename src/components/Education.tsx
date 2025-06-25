@@ -55,6 +55,7 @@ const Education = () => {
     },
     {
       type: 'school',
+      degree : "Grade XI - XII",
       school: "N.S.N Memorial Senior Secondary School (CBSE)",
       location: "Chennai", 
       duration: "2020 - 2022",
