@@ -1,42 +1,61 @@
 
 import ScrambleText from './ScrambleText';
+import { 
+  SiPython, SiJavascript, SiJava, SiCplusplus, SiR, SiMysql,
+  SiTensorflow, SiPytorch, SiScikitlearn, SiPandas, SiNumpy, SiOpencv,
+  SiFlask, SiFastapi, SiPostgresql, SiVuedotjs, SiDocker,
+  SiGit, SiJupyter, SiAnaconda, SiVisualstudiocode, SiLinux
+} from 'react-icons/si';
+import { FaC } from 'react-icons/fa6';
+import { SiGnubash } from 'react-icons/si';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python","C", "C++", "R", "SQL", "JavaScript", "Java", "Bash"]
+      skills: [
+        { name: "Python", icon: SiPython },
+        { name: "C", icon: FaC },
+        { name: "C++", icon: SiCplusplus },
+        { name: "R", icon: SiR },
+        { name: "SQL", icon: SiMysql },
+        { name: "JavaScript", icon: SiJavascript },
+        { name: "Java", icon: SiJava },
+        { name: "Bash", icon: SiGnubash }
+      ]
     },
     {
       title: "AI/ML & Data Science",
-      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "OpenCV"]
+      skills: [
+        { name: "TensorFlow", icon: SiTensorflow },
+        { name: "PyTorch", icon: SiPytorch },
+        { name: "Scikit-learn", icon: SiScikitlearn },
+        { name: "Pandas", icon: SiPandas },
+        { name: "NumPy", icon: SiNumpy },
+        { name: "OpenCV", icon: SiOpencv }
+      ]
     },
     {
       title: "Web Technologies",
-      skills: ["Flask", "FastAPI", "SQLAlchemy", "PostgreSQL", "Vue.js", "Docker"]
+      skills: [
+        { name: "Flask", icon: SiFlask },
+        { name: "FastAPI", icon: SiFastapi },
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "Vue.js", icon: SiVuedotjs },
+        { name: "Docker", icon: SiDocker }
+      ]
     },
     {
       title: "Tools & Platforms",
-      skills: ["Git", "Jupyter", "Anaconda", "VS Code", "Linux"]
+      skills: [
+        { name: "Git", icon: SiGit },
+        { name: "Jupyter", icon: SiJupyter },
+        { name: "Anaconda", icon: SiAnaconda },
+        { name: "VS Code", icon: SiVisualstudiocode },
+        { name: "Linux", icon: SiLinux }
+      ]
     }
   ];
-
-  const getRandomSize = () => {
-    const sizes = ['text-sm', 'text-base', 'text-lg'];
-    return sizes[Math.floor(Math.random() * sizes.length)];
-  };
-
-  const getRandomColor = () => {
-    const colors = [
-      'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-      'bg-blue-500/20 text-blue-300 border-blue-500/30',
-      'bg-purple-500/20 text-purple-300 border-purple-500/30',
-      'bg-pink-500/20 text-pink-300 border-pink-500/30',
-      'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
-      'bg-orange-500/20 text-orange-300 border-orange-500/30'
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
 
   return (
     <section id="skills" className="py-20 px-4 bg-black">
@@ -59,28 +78,34 @@ const Skills = () => {
               />
               
               <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    className={`
-                      px-4 py-2 rounded-full border transition-all duration-300
-                      hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/20
-                      cursor-default transform hover:-translate-y-1
-                      ${getRandomColor()}
-                      ${getRandomSize()}
-                      animate-fade-in
-                    `}
-                    style={{
-                      animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
-                    }}
-                  >
-                    <ScrambleText 
-                      text={skill}
-                      className="font-medium"
-                      delay={categoryIndex * 200 + skillIndex * 100}
-                    />
-                  </div>
-                ))}
+                {category.skills.map((skill, skillIndex) => {
+                  const IconComponent = skill.icon;
+                  return (
+                    <div
+                      key={skillIndex}
+                      className="
+                        px-4 py-3 rounded-full border border-emerald-500/30
+                        bg-emerald-500/10 text-emerald-300
+                        hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/20
+                        hover:bg-emerald-500/20 hover:border-emerald-500/50
+                        cursor-default transform hover:-translate-y-1
+                        transition-all duration-300
+                        flex items-center gap-2
+                        animate-fade-in
+                      "
+                      style={{
+                        animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
+                      }}
+                    >
+                      <IconComponent className="text-lg" />
+                      <ScrambleText 
+                        text={skill.name}
+                        className="font-medium text-sm"
+                        delay={categoryIndex * 200 + skillIndex * 100}
+                      />
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -89,8 +114,8 @@ const Skills = () => {
         {/* Floating background elements for visual interest */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400/20 rounded-full animate-pulse"></div>
-          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-blue-400/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-purple-400/20 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-emerald-400/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-emerald-400/20 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
       </div>
     </section>
