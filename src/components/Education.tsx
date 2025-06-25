@@ -52,6 +52,14 @@ const Education = () => {
         "Machine Learning Fundamentals, Practices & Techniques",
         "Deep Learning"
       ]
+    },
+    {
+      type: 'school',
+      school: "N.S.N Memorial Senior Secondary School (CBSE)",
+      location: "Chennai", 
+      duration: "2020 - 2022",
+      percentage: "90.2",
+      description: "Graduated in Science Stream (Biology + Math)",
     }
   ];
 
