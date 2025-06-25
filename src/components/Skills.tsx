@@ -4,11 +4,11 @@ import {
   SiPython, SiJavascript, SiCplusplus, SiR, SiMysql,
   SiTensorflow, SiPytorch, SiScikitlearn, SiPandas, SiNumpy, SiOpencv,
   SiFlask, SiFastapi, SiPostgresql, SiVuedotjs, SiDocker,
-  SiGit, SiJupyter, SiAnaconda, SiLinux, SiVisualstudiocode
+  SiGit, SiJupyter, SiAnaconda, SiLinux
 } from 'react-icons/si';
 import { FaC } from 'react-icons/fa6';
 import { SiGnubash } from 'react-icons/si';
-import { Coffee } from 'lucide-react';
+import { Coffee, Code } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
@@ -52,7 +52,7 @@ const Skills = () => {
         { name: "Git", icon: SiGit },
         { name: "Jupyter", icon: SiJupyter },
         { name: "Anaconda", icon: SiAnaconda },
-        { name: "VS Code", icon: SiVisualstudiocode },
+        { name: "VS Code", icon: Code },
         { name: "Linux", icon: SiLinux }
       ]
     }
