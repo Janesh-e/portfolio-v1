@@ -21,7 +21,7 @@ const Education = () => {
       type: 'college',
       degree: "BTech, Computer Science and Business Systems",
       school: "Sri Sairam Engineering College",
-      location: "Chennai, India",
+      location: "Chennai, TN, India",
       duration: "2022 - 2026",
       gpa: "8.91/10.0",
       specialization: "Computer Science and Engineering",
@@ -57,11 +57,11 @@ const Education = () => {
       type: 'school',
       degree : "Grade XI - XII",
       school: "N.S.N Memorial Senior Secondary School (CBSE)",
-      location: "Chennai", 
+      location: "Chennai, TN, India", 
       duration: "2020 - 2022",
       percentage: "90.2",
       description: "Graduated in Science Stream (Biology + Math)",
-    }
+    },
   ];
 
   const certifications = [
