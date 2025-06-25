@@ -1,13 +1,14 @@
 
 import ScrambleText from './ScrambleText';
 import { 
-  SiPython, SiJavascript, SiJava, SiCplusplus, SiR, SiMysql,
+  SiPython, SiJavascript, SiCplusplus, SiR, SiMysql,
   SiTensorflow, SiPytorch, SiScikitlearn, SiPandas, SiNumpy, SiOpencv,
   SiFlask, SiFastapi, SiPostgresql, SiVuedotjs, SiDocker,
-  SiGit, SiJupyter, SiAnaconda, SiVisualstudiocode, SiLinux
+  SiGit, SiJupyter, SiAnaconda, SiLinux, SiVisualstudio
 } from 'react-icons/si';
 import { FaC } from 'react-icons/fa6';
 import { SiGnubash } from 'react-icons/si';
+import { Coffee } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
@@ -20,7 +21,7 @@ const Skills = () => {
         { name: "R", icon: SiR },
         { name: "SQL", icon: SiMysql },
         { name: "JavaScript", icon: SiJavascript },
-        { name: "Java", icon: SiJava },
+        { name: "Java", icon: Coffee },
         { name: "Bash", icon: SiGnubash }
       ]
     },
@@ -51,7 +52,7 @@ const Skills = () => {
         { name: "Git", icon: SiGit },
         { name: "Jupyter", icon: SiJupyter },
         { name: "Anaconda", icon: SiAnaconda },
-        { name: "VS Code", icon: SiVisualstudiocode },
+        { name: "VS Code", icon: SiVisualstudio },
         { name: "Linux", icon: SiLinux }
       ]
     }
@@ -97,10 +98,10 @@ const Skills = () => {
                         animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
                       }}
                     >
-                      <IconComponent className="text-lg" />
+                      <IconComponent className="text-lg text-emerald-400" />
                       <ScrambleText 
                         text={skill.name}
-                        className="font-medium text-sm"
+                        className="font-medium text-sm text-emerald-300"
                         delay={categoryIndex * 200 + skillIndex * 100}
                       />
                     </div>

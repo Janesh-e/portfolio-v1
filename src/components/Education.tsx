@@ -37,7 +37,7 @@ const Education = () => {
         "Modern Application Development",
         "Tools for Data Science",
         "Machine Learning Fundamentals, Practices & Techniques",
-        "Deep Learning",
+        "Deep Learning"
       ]
     }
   ];
@@ -90,10 +90,14 @@ const Education = () => {
                       <span>{edu.duration}</span>
                       <span>•</span>
                       <span>{edu.location}</span>
-                      <span>•</span>
-                      <span className="text-emerald-400 font-semibold">
-                        {edu.gpa ? `GPA: ${edu.gpa}` : `Percentage: ${edu.percentage}`}
-                      </span>
+                      {(edu.gpa || edu.percentage) && (
+                        <>
+                          <span>•</span>
+                          <span className="text-emerald-400 font-semibold">
+                            {edu.gpa ? `GPA: ${edu.gpa}` : `Percentage: ${edu.percentage}`}
+                          </span>
+                        </>
+                      )}
                     </div>
 
                     {edu.description && (
