@@ -69,7 +69,7 @@ const Contact = () => {
               <a href="https://github.com/Janesh-e" className="w-12 h-12 bg-gray-800 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-all duration-300 group">
                 <Github className="text-gray-300 group-hover:text-black" size={20} />
               </a>
-              <a href="www.linkedin.com/in/janesh-e-683457258" className="w-12 h-12 bg-gray-800 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-all duration-300 group">
+              <a href="https://www.linkedin.com/in/janesh-e-683457258" className="w-12 h-12 bg-gray-800 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-all duration-300 group">
                 <Linkedin className="text-gray-300 group-hover:text-black" size={20} />
               </a>
             </div>
