@@ -2,17 +2,20 @@
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import ScrambleText from './ScrambleText';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 
 const Projects = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [selectedDomain, setSelectedDomain] = useState<string>('all');
 
   const projects = [
     {
       title: "AI-Powered Recommendation System",
       description: "Built a machine learning model using collaborative filtering to recommend products based on user behavior and preferences.",
       technologies: ["Python", "TensorFlow", "Pandas", "Flask"],
+      primaryDomain: "Machine Learning",
       image: "/placeholder.svg?height=300&width=400",
       github: "#",
       demo: "#"
@@ -21,6 +24,7 @@ const Projects = () => {
       title: "Stock Market Prediction Model",
       description: "Developed a deep learning model using LSTM networks to predict stock prices with 87% accuracy.",
       technologies: ["Python", "Keras", "NumPy", "Matplotlib"],
+      primaryDomain: "Machine Learning",
       image: "/placeholder.svg?height=300&width=400",
       github: "#",
       demo: "#"
@@ -29,6 +33,7 @@ const Projects = () => {
       title: "Real-time Chat Application",
       description: "Full-stack chat application with real-time messaging, user authentication, and responsive design.",
       technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
+      primaryDomain: "Web Development",
       image: "/placeholder.svg?height=300&width=400",
       github: "#",
       demo: "#"
@@ -37,11 +42,20 @@ const Projects = () => {
       title: "Data Visualization Dashboard",
       description: "Interactive dashboard for analyzing large datasets with various chart types and filtering options.",
       technologies: ["React", "D3.js", "Python", "FastAPI"],
+      primaryDomain: "Data Science",
       image: "/placeholder.svg?height=300&width=400",
       github: "#",
       demo: "#"
     }
   ];
+
+  // Get unique domains for filter
+  const domains = Array.from(new Set(projects.map(project => project.primaryDomain)));
+
+  // Filter projects based on selected domain
+  const filteredProjects = selectedDomain === 'all' 
+    ? projects 
+    : projects.filter(project => project.primaryDomain === selectedDomain);
 
   const scroll = (direction: 'left' | 'right') => {
     const container = scrollContainerRef.current;
@@ -84,7 +98,7 @@ const Projects = () => {
       container.addEventListener('scroll', updateScrollButtons);
       return () => container.removeEventListener('scroll', updateScrollButtons);
     }
-  }, []);
+  }, [filteredProjects]);
 
   return (
     <section id="projects" className="py-20 px-4 bg-gray-900">
@@ -94,7 +108,24 @@ const Projects = () => {
             text="My Projects" 
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           />
-          <div className="w-24 h-1 bg-emerald-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-emerald-500 mx-auto mb-8"></div>
+          
+          {/* Domain Filter */}
+          <div className="flex justify-center">
+            <Select value={selectedDomain} onValueChange={setSelectedDomain}>
+              <SelectTrigger className="w-64 bg-black/50 border-gray-800 text-white">
+                <SelectValue placeholder="Filter by domain" />
+              </SelectTrigger>
+              <SelectContent className="bg-gray-800 border-gray-700">
+                <SelectItem value="all" className="text-white hover:bg-gray-700">All Domains</SelectItem>
+                {domains.map((domain) => (
+                  <SelectItem key={domain} value={domain} className="text-white hover:bg-gray-700">
+                    {domain}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
 
         <div className="relative">
@@ -135,7 +166,7 @@ const Projects = () => {
                 maxWidth: 'calc(4 * 320px + 3 * 24px)' // Exactly 4 cards + 3 gaps
               }}
             >
-              {projects.map((project, index) => (
+              {filteredProjects.map((project, index) => (
                 <div key={index} className="flex-shrink-0 w-80 bg-black/50 rounded-xl overflow-hidden border border-gray-800 hover:border-emerald-500/50 transition-all duration-300 group">
                   <div className="h-48 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 flex items-center justify-center">
                     <div className="text-6xl text-emerald-400/50">📊</div>
@@ -144,9 +175,16 @@ const Projects = () => {
                   <div className="p-6">
                     <ScrambleText 
                       text={project.title}
-                      className="text-xl font-bold text-white mb-3"
+                      className="text-xl font-bold text-white mb-1"
                       delay={index * 200}
                     />
+                    
+                    {/* Primary Domain Badge */}
+                    <div className="mb-4">
+                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">
+                        {project.primaryDomain}
+                      </span>
+                    </div>
                     
                     <ScrambleText 
                       text={project.description}
