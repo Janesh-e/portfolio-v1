@@ -1,5 +1,5 @@
 
-import { GraduationCap, Award, BookOpen, School } from 'lucide-react';
+import { GraduationCap, BookOpen, School } from 'lucide-react';
 import ScrambleText from './ScrambleText';
 
 interface EducationItem {
@@ -64,12 +64,6 @@ const Education = () => {
     },
   ];
 
-  const certifications = [
-    "Google Data Analytics Professional Certificate",
-    "AWS Machine Learning Specialty",
-    "Deep Learning Specialization - Coursera",
-    "Python for Data Science - IBM"
-  ];
 
   return (
     <section id="education" className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -82,8 +76,7 @@ const Education = () => {
           <div className="w-24 h-1 bg-emerald-500 mx-auto"></div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
+        <div className="space-y-8">
             {education.map((edu, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-emerald-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">
@@ -159,32 +152,6 @@ const Education = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-              <div className="flex items-center space-x-3 mb-4">
-                <Award className="text-emerald-400" size={24} />
-                <ScrambleText 
-                  text="Certifications"
-                  className="text-xl font-bold text-white"
-                />
-              </div>
-              
-              <div className="space-y-3">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <ScrambleText 
-                      text={cert}
-                      className="text-gray-300 text-sm leading-relaxed"
-                      delay={400 + index * 100}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
