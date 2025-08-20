@@ -18,6 +18,14 @@ const Certifications = () => {
 
   const certificates: Certificate[] = [
     {
+      title: "Project Development Using Java",
+      provider: "Udemy",
+      domain: ["Java"],
+      image: "/certificates/udemy/Project_development_using_Java.jpg",
+      issueDate: "May 2025",
+      credentialId: "NA"
+    },
+    {
       title: "Google Data Analytics Professional Certificate",
       provider: "Google",
       domain: ["Data Analytics", "Business Intelligence"],
