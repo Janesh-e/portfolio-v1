@@ -12,39 +12,39 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "AI-Powered Recommendation System",
-      description: "Built a machine learning model using collaborative filtering to recommend products based on user behavior and preferences.",
-      technologies: ["Python", "TensorFlow", "Pandas", "Flask"],
-      primaryDomain: "Machine Learning",
+      title: "Nirman Netra",
+      description: "Nirman Netra is an AI-powered monitoring platform for detecting unauthorized constructions using aerial imagery.",
+      technologies: ["Python", "TensorFlow", "OpenCV", "Rasterio", "GeoPY", "Flask", "HTML", "CSS", "JS"],
+      primaryDomain: "Deep Learning",
       image: "/placeholder.svg?height=300&width=400",
-      github: "#",
+      github: "https://github.com/Janesh-e/Nirman_Netra_Models",
       demo: "#"
     },
     {
-      title: "Stock Market Prediction Model",
-      description: "Developed a deep learning model using LSTM networks to predict stock prices with 87% accuracy.",
-      technologies: ["Python", "Keras", "NumPy", "Matplotlib"],
-      primaryDomain: "Machine Learning",
+      title: "TheraSage",
+      description: "TheraSage is an AI-powered emotional support companion that understands the user's feelings, provides empathetic responses, and gently introduces CBT (Cognitive Behavioral Therapy) tools for mental well-being.",
+      technologies: ["LLMs", "HuggingFace Transformers", "PyTorch", "LangGraph", "LangSmith", "FastAPI", "VAD", "STT", "TTS"],
+      primaryDomain: "Natural Language Processing",
       image: "/placeholder.svg?height=300&width=400",
-      github: "#",
+      github: "https://github.com/Janesh-e/TheraSage",
       demo: "#"
     },
     {
-      title: "Real-time Chat Application",
-      description: "Full-stack chat application with real-time messaging, user authentication, and responsive design.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-      primaryDomain: "Web Development",
+      title: "AstroChat-SpaceBot",
+      description: "AstroChat-SpaceBot is an intelligent space science chatbot that leverages LLMs with RAG (Retrieval-Augmented Generation) and Conversational Retrieval Chains to provide accurate and interactive responses about astronomy, astrophysics, cosmology, and beyond.",
+      technologies: ["LLMs", "HuggingFace Transformers", "PyTorch", "RAG", "LangChain", "FaissDB", "FastAPI"],
+      primaryDomain: "Natural Language Processing",
       image: "/placeholder.svg?height=300&width=400",
-      github: "#",
+      github: "https://github.com/Janesh-e/AstroChat-SpaceBot",
       demo: "#"
     },
     {
-      title: "Data Visualization Dashboard",
-      description: "Interactive dashboard for analyzing large datasets with various chart types and filtering options.",
-      technologies: ["React", "D3.js", "Python", "FastAPI"],
-      primaryDomain: "Data Science",
+      title: "Toxin Detection App",
+      description: "It is an end-to-end intelligent platform that classifies food incident reports into hazard types and product categories using deep learning models. It also provides a simple web interface powered by FastAPI and enables efficient classification with pre-trained BERT-based models.",
+      technologies: ["LLMs", "HuggingFace Transformers", "PyTorch", "FastAPI", , "HTML", "CSS", "JS", "Docker"],
+      primaryDomain: "Natural Language Processing",
       image: "/placeholder.svg?height=300&width=400",
-      github: "#",
+      github: "https://github.com/Janesh-e/toxin-detection-app",
       demo: "#"
     }
   ];
