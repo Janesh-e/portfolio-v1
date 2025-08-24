@@ -41,44 +41,6 @@ const About = () => {
             />
             
           </div>
-
-          <div className="relative">
-            <div className="bg-gradient-to-br from-emerald-500/20 to-blue-500/20 p-8 rounded-2xl backdrop-blur-sm border border-emerald-500/30">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Problem Solving</span>
-                  <span className="text-emerald-400">95%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-500 h-2 rounded-full w-[95%]"></div>
-                </div>
-
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">AI/ML Knowledge</span>
-                  <span className="text-emerald-400">88%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-500 h-2 rounded-full w-[88%]"></div>
-                </div>
-
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Data Analysis</span>
-                  <span className="text-emerald-400">92%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-500 h-2 rounded-full w-[92%]"></div>
-                </div>
-
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Programming</span>
-                  <span className="text-emerald-400">90%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-500 h-2 rounded-full w-[90%]"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
