@@ -98,6 +98,30 @@ const Certifications = () => {
       credentialId: "NA"
     },
     {
+      title: "C",
+      provider: "IITB Spoken Tutorial",
+      domain: ["C"],
+      image: "/certificates/iitb-spoken-tutorial/Spoken tutorial - C.jpg",
+      issueDate: "April 2023",
+      credentialId: "NA"
+    },
+    {
+      title: "Python",
+      provider: "IITB Spoken Tutorial",
+      domain: ["Python"],
+      image: "/certificates/iitb-spoken-tutorial/Spoken tutorial - Python.jpg",
+      issueDate: "April 2024",
+      credentialId: "NA"
+    },
+    {
+      title: "Git",
+      provider: "IITB Spoken Tutorial",
+      domain: ["Git"],
+      image: "/certificates/iitb-spoken-tutorial/Spoken tutorial - Git.jpg",
+      issueDate: "May 2025",
+      credentialId: "NA"
+    },
+    {
       title: "Google Data Analytics Professional Certificate",
       provider: "Google",
       domain: ["Data Analytics", "Business Intelligence"],
