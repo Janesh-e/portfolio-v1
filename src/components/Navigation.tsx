@@ -21,6 +21,7 @@ const Navigation = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
     { name: 'Education', href: '#education' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Contact', href: '#contact' }
   ];
