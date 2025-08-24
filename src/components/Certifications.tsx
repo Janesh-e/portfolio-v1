@@ -58,6 +58,46 @@ const Certifications = () => {
       credentialId: "NA"
     },
     {
+      title: "Computer Networks and Internet Protocol",
+      provider: "NPTEL",
+      domain: ["CN&IP"],
+      image: "/certificates/nptel/NPTEL - Computer Networks and Internet Protocol.jpg",
+      issueDate: "April 2025",
+      credentialId: "NA"
+    },
+    {
+      title: "Introduction To Internet Of Things",
+      provider: "NPTEL",
+      domain: ["IOT"],
+      image: "/certificates/nptel/NPTEL - Introduction To Internet Of Things.jpg",
+      issueDate: "April 2025",
+      credentialId: "NA"
+    },
+    {
+      title: "Introduction to Machine Learning",
+      provider: "NPTEL",
+      domain: ["AIML"],
+      image: "/certificates/nptel/NPTEL - Introduction to Machine Learning.jpg",
+      issueDate: "October 2024",
+      credentialId: "NA"
+    },
+    {
+      title: "Programming in Java",
+      provider: "NPTEL",
+      domain: ["Java"],
+      image: "/certificates/nptel/NPTEL - Programming in Java.jpg",
+      issueDate: "October 2023",
+      credentialId: "NA"
+    },
+    {
+      title: "Software Testing",
+      provider: "NPTEL",
+      domain: ["SDE"],
+      image: "/certificates/nptel/NPTEL - Software Testing.jpg",
+      issueDate: "October 2024",
+      credentialId: "NA"
+    },
+    {
       title: "Google Data Analytics Professional Certificate",
       provider: "Google",
       domain: ["Data Analytics", "Business Intelligence"],
