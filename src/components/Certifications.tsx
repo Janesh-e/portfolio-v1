@@ -20,9 +20,41 @@ const Certifications = () => {
     {
       title: "Project Development Using Java",
       provider: "Udemy",
-      domain: ["Java"],
+      domain: ["Java", "Project Development"],
       image: "/certificates/udemy/Project_development_using_Java.jpg",
       issueDate: "May 2025",
+      credentialId: "NA"
+    },
+    {
+      title: "Professional Diploma in Agile & Project Management",
+      provider: "Udemy",
+      domain: ["Project Development"],
+      image: "/certificates/udemy/Professional_Diploma_in_Agile_&_Project_Management.jpg",
+      issueDate: "April 2024",
+      credentialId: "NA"
+    },
+    {
+      title: "Master in Product Design, Development & Prototyping",
+      provider: "Udemy",
+      domain: ["Project Development"],
+      image: "/certificates/udemy/Master_in_Product_Design_and_Development_and_Prototyping.jpg",
+      issueDate: "May 2025",
+      credentialId: "NA"
+    },
+    {
+      title: "Management Skills Training",
+      provider: "Udemy",
+      domain: ["Management"],
+      image: "/certificates/udemy/Management_skills_training.jpg",
+      issueDate: "May 2024",
+      credentialId: "NA"
+    },
+    {
+      title: "Excel Dashboards",
+      provider: "Udemy",
+      domain: ["Excel"],
+      image: "/certificates/udemy/Excel_Dashboards.jpg",
+      issueDate: "May 2024",
       credentialId: "NA"
     },
     {
