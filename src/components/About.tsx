@@ -14,7 +14,7 @@ const About = () => {
           <div className="w-24 h-1 bg-emerald-500 mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-6">
             <ScrambleText 
               text="I'm a Computer Science undergrad in my final year, specializing in Artificial Intelligence, Machine Learning, and Data Science. My journey into the world of AI/ML began not just out of academic pursuit, but out of pure curiosity."
