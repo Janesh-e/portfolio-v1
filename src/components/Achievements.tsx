@@ -6,46 +6,25 @@ const Achievements = () => {
   const achievements = [
     {
       icon: Trophy,
-      title: "1st Place - University AI Hackathon 2024",
-      description: "Led a team of 4 to develop an AI-powered solution for predicting crop yields using satellite imagery and weather data.",
-      date: "March 2024",
+      title: "Smart India Hackathon 2024 (Finalist)",
+      description: "Selected among top teams for showcasing innovative tech solutions.",
+      date: "Dec 2024",
       category: "Competition"
     },
     {
       icon: Medal,
-      title: "Dean's List",
-      description: "Achieved Dean's List recognition for 6 consecutive semesters with GPA above 3.7.",
-      date: "2021 - 2024",
-      category: "Academic"
+      title: "International Rover Challenge 2025 (Finalist)",
+      description: "Reached finals and carried out a successful Autonomous Rover Expedition in a robotics competition.",
+      date: "Jan 2025",
+      category: "Competition"
     },
     {
       icon: Star,
-      title: "Best Research Paper Award",
-      description: "Published research on 'Enhancing NLP Models for Medical Text Analysis' won best paper at the Student Research Conference.",
-      date: "November 2023",
-      category: "Research"
+      title: "Qualified GATE 2025 in DA",
+      description: "Secured AIR 5618 in the national-level enterance exam, in the paper Data Science and AI",
+      date: "Feb 2025",
+      category: "Academics"
     },
-    {
-      icon: Users,
-      title: "Google Summer of Code",
-      description: "Selected as a Google Summer of Code contributor for TensorFlow project, contributing to open-source ML libraries.",
-      date: "Summer 2023",
-      category: "Open Source"
-    },
-    {
-      icon: Trophy,
-      title: "Data Science Challenge Winner",
-      description: "Won 2nd place in the National Data Science Challenge with a predictive model achieving 94% accuracy.",
-      date: "September 2023",
-      category: "Competition"
-    },
-    {
-      icon: Medal,
-      title: "Outstanding Student Leader",
-      description: "Recognized for leadership in organizing tech workshops and mentoring fellow students in AI/ML concepts.",
-      date: "May 2023",
-      category: "Leadership"
-    }
   ];
 
   const stats = [
